@@ -1,18 +1,26 @@
-// src/App.js
-
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
-import Login from './components/Auth/Login';
+import { ProductProvider } from './contexts/ProductContext';
 import Signup from './components/Auth/Signup';
+import Login from './components/Auth/Login';
+import Products from './components/Store/Products'
+import PrivateRoute from './components/Route/PrivateRoute';
+import './App.css';
 
 const App = () => {
   return (
     <AuthProvider>
-      <div className="App">
-        <h1>Welcome to the E-Commerce App</h1>
-        <Signup />
-        <Login />
-      </div>
+      <ProductProvider>
+        <Router>
+          <Routes>
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            {/* Private route for products */}
+            <Route path="/Store/Products" element={<PrivateRoute><Products /></PrivateRoute>} />
+          </Routes>
+        </Router>
+      </ProductProvider>
     </AuthProvider>
   );
 };

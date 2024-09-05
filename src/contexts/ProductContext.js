@@ -7,9 +7,10 @@ export const ProductProvider = ({ children }) => {
 
   useEffect(() => {
     // Fetch products from local JSON or API
-    fetch('../../public/products.json')
+    fetch('/products.json') // Update with correct path
       .then(response => response.json())
-      .then(data => setProducts(data));
+      .then(data => setProducts(data))
+      .catch(error => console.error('Error fetching products:', error));
   }, []);
 
   return (
