@@ -17,7 +17,7 @@ const CartItems = ({ item }) => {
       <img src={item.image} alt={item.name} style={{ width: '100px', height: '100px' }} />
       <div className="cart-item-details">
         <h3>{item.name}</h3>
-        <p>${item.price}</p>
+        <p>{item.price}</p>
         <input
           type="number"
           value={item.quantity}
