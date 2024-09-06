@@ -56,15 +56,15 @@
     padding: 2rem;
   }
   .product-item button {
-    margin-top: 10px;
-    padding: 8px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .product-item button:hover {
-    background-color: #45a049;
-  }
+  margin-top: 10px;
+  padding: 8px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.product-item button:hover {
+  background-color: #45a049;
+}

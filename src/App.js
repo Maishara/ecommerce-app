@@ -19,6 +19,7 @@ const App = () => {
           <Router>
             <Layout>
               <Routes>
+              <Route path="/" element={<Login />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
                 {/* Private route for products */}
