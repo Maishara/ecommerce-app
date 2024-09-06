@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { AuthContext } from '../../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import '../../Styles/Auth.css';
 
 const Login = () => {
   const { login } = useContext(AuthContext);
@@ -10,40 +11,41 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Replace with actual login logic
-    login(username, password);
+    login(username, password); // Simulate login
     navigate('../Store/Products');
   };
 
   return (
-    <div>
-      <h2>Login</h2>
-      <form onSubmit={handleLogin}>
-        <label>
-          Username:
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          />
-        </label>
-        <br />
-        <label>
-          Password:
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </label>
-        <br />
-        <button type="submit">Login</button>
-      </form>
-      <p>
-        Don't have an account? <a href="/signup">Click here to sign up</a>
-      </p>
+    <div className="auth-container">
+      <div className="auth-form">
+        <h2>Login</h2>
+        <form onSubmit={handleLogin}>
+          <label>
+            Username:
+            <input
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+            />
+          </label>
+          <br />
+          <label>
+            Password:
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </label>
+          <br />
+          <button type="submit">Login</button>
+        </form>
+        <p>
+          Don't have an account? <a href="/signup">Click here to sign up</a>
+        </p>
+      </div>
     </div>
   );
 };
