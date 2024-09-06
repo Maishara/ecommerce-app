@@ -21,7 +21,7 @@ const App = () => {
               <Routes>
               <Route path="/" element={<Login />} />
                 <Route path="/login" element={<Login />} />
-                <Route path="/signup" element={<Signup />} />
+                <Route path="/Signup" element={<Signup />} />
                 {/* Private route for products */}
                 <Route path="/Store/Products" element={<PrivateRoute><Products /></PrivateRoute>} />
                 <Route path="/cart" element={<Cart />} />
@@ -36,7 +36,7 @@ const App = () => {
 
 const Layout = ({ children }) => {
   const location = useLocation();
-  const isAuthPage = location.pathname === '/login' || location.pathname === '/signup';
+  const isAuthPage = location.pathname === '/login' || location.pathname === '/Signup';
 
   return (
     <div>

@@ -9,7 +9,7 @@ const Signup = () => {
 
   const handleSignup = (e) => {
     e.preventDefault();
-    // Simulate sign-up
+  
     console.log('Sign-up:', { username, password });
     navigate('/login');
   };
