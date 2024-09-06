@@ -11,7 +11,7 @@ export const CartProvider = ({ children }) => {
       if (existingProduct) {
         return prevCart.map(item =>
           item.id === product.id
-            ? { ...item, quantity: item.quantity + 1 }
+            ? { ...item, quantity: item.quantity + 1, image: product.image }
             : item
         );
       } else {

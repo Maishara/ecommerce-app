@@ -14,7 +14,7 @@ const CartItems = ({ item }) => {
 
   return (
     <div className="cart-item">
-      <img src={item.imageUrl} alt={item.name} style={{ width: '100px', height: '100px' }} />
+      <img src={item.image} alt={item.name} style={{ width: '100px', height: '100px' }} />
       <div className="cart-item-details">
         <h3>{item.name}</h3>
         <p>${item.price}</p>

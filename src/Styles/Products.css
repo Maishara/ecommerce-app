@@ -1,0 +1,46 @@
+/* Styles for product page layout */
+.product-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000;
+  }
+  
+  .product-content {
+    background-color: #fff;
+    padding: 2rem;
+    width: calc(100% - 8rem); /* Ensure 4 inches of black space on both sides */
+    max-width: 1200px; /* Max width for the white box */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .product-item {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  .product-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  .cart-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .cart-page {
+    padding: 2rem;
+  }
+  
