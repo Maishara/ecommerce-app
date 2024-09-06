@@ -36,7 +36,7 @@ const App = () => {
 
 const Layout = ({ children }) => {
   const location = useLocation();
-  const isAuthPage = location.pathname === '/login' || location.pathname === '/Signup';
+  const isAuthPage = location.pathname === '/login' || location.pathname === '/Signup' || location.pathname === '/';
 
   return (
     <div>
