@@ -19,7 +19,7 @@ const Cart = () => {
   }, 0);
 
   const handleCheckout = () => {
-    // Handle checkout logic here
+   
     console.log('Proceed to checkout');
   };
 

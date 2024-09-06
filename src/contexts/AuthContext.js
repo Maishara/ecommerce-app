@@ -2,7 +2,7 @@
 
 import React, { createContext, useState, useEffect } from 'react';
 
-// Create an authentication context
+
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
@@ -10,7 +10,7 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
 
-  // Simulated API calls for sign up and login
+  
   const signUp = async (username, password) => {
    
     setUser({ username });
@@ -30,10 +30,10 @@ export const AuthProvider = ({ children }) => {
     setIsAuthenticated(false);
     setUser(null);
     setError(null);
-    // Optionally clear token or session here
+  
   };
 
-  // Persist authentication state on page reload
+  
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem('user'));
     if (storedUser) {
